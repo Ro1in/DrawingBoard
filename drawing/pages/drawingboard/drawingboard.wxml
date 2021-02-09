@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 画布 -->
+  <view>
+    <canvas 
+      canvas-id="myCanvas" 
+      class="myCanvas" 
+      style="width:{{screenWidth}}px;height:{{screenHeight}}px"
+      bindtouchstart="touchStart"
+      bindtouchmove="touchMove"
+    ></canvas>
+  </view>
+
+  <!-- 工具栏 -->
+  <view class="toolsbar">
+    <!-- 第一行 -->
+    <view class="canvas_tools">
+      <!-- 颜色选择 -->
+      <view class="{{ curColor == '#d71345' ? 't-item-cur' : 't-item'}}"    
+            style="background-color:#d71345"
+            bindtap="colorSelect" data-p="#d71345"></view> 
+      <view class="{{ curColor == '#f58220' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#f58220"
+            bindtap="colorSelect" data-p="#f58220"></view>
+      <view class="{{ curColor == '#ffd400' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#ffd400"
+            bindtap="colorSelect" data-p="#ffd400"></view>
+      <view class="{{ curColor == '#7fb80e' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#7fb80e"
+            bindtap="colorSelect" data-p="#7fb80e"></view>
+      <view class="{{ curColor == '#00a6ac' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#00a6ac"
+            bindtap="colorSelect" data-p="#00a6ac"></view>
+      <view class="{{ curColor == '#009ad6' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#009ad6"
+            bindtap="colorSelect" data-p="#009ad6"></view>
+      <view class="{{ curColor == '#444693' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#444693"
+            bindtap="colorSelect" data-p="#444693"></view>
+      <view class="{{ curColor == '#000000' ? 't-item-cur' : 't-item'}}" 
+            style="background-color:#000000"
+            bindtap="colorSelect" data-p="#000000"></view>
+    </view>
+
+    <!-- 第二行 -->
+    <view class="canvas_tools">
+      <!-- 画笔粗细选择 -->
+      <view class="{{curSize == '4' ? 't-item-cur' : 't-item'}}"    
+            bindtap="penSizeSelect" data-p="4">细</view> 
+      <view class="{{curSize == '10' ? 't-item-cur' : 't-item'}}" 
+            bindtap="penSizeSelect" data-p="10">中</view>
+      <view class="{{curSize == '20' ? 't-item-cur' : 't-item'}}" 
+            bindtap="penSizeSelect" data-p="20">粗</view>
+      
+      <!-- 清空笔画 -->
+      <view class="t-clear" bindtap="clearCanvas">清空</view>
+
+      <!-- 插入图片 -->
+      <view class="t-insert" bindtap="insertImage">
+            <image src="/images/加号.png" 
+                   style="width:78rpx;height:78rpx"></image>
+      </view>
+      </view>
+  </view>
+
+</view>

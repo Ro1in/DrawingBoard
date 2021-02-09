@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/drawingboard/drawingboard",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "画板",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#feeeed"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
